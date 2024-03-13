@@ -14,6 +14,10 @@
 		038E0BE22BA1C3F7006927B5 /* MapViewTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038E0BE12BA1C3F7006927B5 /* MapViewTestTests.swift */; };
 		038E0BEC2BA1C3F7006927B5 /* MapViewTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038E0BEB2BA1C3F7006927B5 /* MapViewTestUITests.swift */; };
 		038E0BEE2BA1C3F7006927B5 /* MapViewTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038E0BED2BA1C3F7006927B5 /* MapViewTestUITestsLaunchTests.swift */; };
+		C22BD87A2BA206CC0061BB54 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22BD8792BA206CC0061BB54 /* LocationManager.swift */; };
+		C22BD87C2BA206E90061BB54 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22BD87B2BA206E90061BB54 /* MapView.swift */; };
+		C22BD87F2BA207290061BB54 /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22BD87E2BA207290061BB54 /* MKMapViewExtension.swift */; };
+		C22BD8812BA207490061BB54 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22BD8802BA207490061BB54 /* DoubleExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		038E0BE72BA1C3F7006927B5 /* MapViewTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapViewTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		038E0BEB2BA1C3F7006927B5 /* MapViewTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewTestUITests.swift; sourceTree = "<group>"; };
 		038E0BED2BA1C3F7006927B5 /* MapViewTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C22BD8792BA206CC0061BB54 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		C22BD87B2BA206E90061BB54 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		C22BD87E2BA207290061BB54 /* MKMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
+		C22BD8802BA207490061BB54 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +102,11 @@
 		038E0BCF2BA1C3F5006927B5 /* MapViewTest */ = {
 			isa = PBXGroup;
 			children = (
+				C22BD87D2BA207140061BB54 /* Extensions */,
 				038E0BD02BA1C3F5006927B5 /* MapViewTestApp.swift */,
 				038E0BD22BA1C3F5006927B5 /* ContentView.swift */,
+				C22BD8792BA206CC0061BB54 /* LocationManager.swift */,
+				C22BD87B2BA206E90061BB54 /* MapView.swift */,
 				038E0BD42BA1C3F7006927B5 /* Assets.xcassets */,
 				038E0BD62BA1C3F7006927B5 /* Preview Content */,
 			);
@@ -125,6 +136,15 @@
 				038E0BED2BA1C3F7006927B5 /* MapViewTestUITestsLaunchTests.swift */,
 			);
 			path = MapViewTestUITests;
+			sourceTree = "<group>";
+		};
+		C22BD87D2BA207140061BB54 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C22BD87E2BA207290061BB54 /* MKMapViewExtension.swift */,
+				C22BD8802BA207490061BB54 /* DoubleExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22BD8812BA207490061BB54 /* DoubleExtension.swift in Sources */,
+				C22BD87F2BA207290061BB54 /* MKMapViewExtension.swift in Sources */,
 				038E0BD32BA1C3F5006927B5 /* ContentView.swift in Sources */,
+				C22BD87C2BA206E90061BB54 /* MapView.swift in Sources */,
 				038E0BD12BA1C3F5006927B5 /* MapViewTestApp.swift in Sources */,
+				C22BD87A2BA206CC0061BB54 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,13 +446,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MapViewTest/Preview Content\"";
+				DEVELOPMENT_TEAM = B3MF7GGVKY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Zugang Location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Dauerhaft Zugang Location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Zugang Location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,6 +464,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marcluetke.MapViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,13 +482,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MapViewTest/Preview Content\"";
+				DEVELOPMENT_TEAM = B3MF7GGVKY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Zugang Location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Dauerhaft Zugang Location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Zugang Location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,6 +500,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marcluetke.MapViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
