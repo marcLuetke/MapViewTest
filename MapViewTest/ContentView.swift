@@ -12,6 +12,20 @@ import MapKit
 // Diese Funktionalität möchte ich auch gerne haben, wenn der User getrackt wird.
 // Also wenn UserTracking an ist und man die DetailView zeigt, soll sich alles nach links verschieben, damit in dem noch sichtbaren Teil der Karte die Position des Users mittig im unteren drittel der Karte angezeigt wird. Das Drehen der Karte beim Tracking berücksichtigen.
 
+// Referenzen:
+// Hier habe ich das her mit dem Verschieben der Karte und Einblenden der DetailView: https://stackoverflow.com/questions/43098546/how-to-offset-mkmapview-to-put-coordinates-under-specified-point
+
+// Hab mir dann noch folgende Seiten dazu angeschaut:
+// https://stackoverflow.com/questions/15421106/centering-mkmapview-on-spot-n-pixels-below-pin
+// https://stackoverflow.com/questions/37288138/how-can-i-center-my-mapview-so-that-the-selected-pin-is-not-in-the-middle-of-the
+// https://stackoverflow.com/questions/67709028/how-to-offset-map-center
+// https://stackoverflow.com/questions/51246045/mkmapview-offset-map-to-make-the-annotation-visible
+// https://stackoverflow.com/questions/24509112/set-current-location-icon-lower-side-in-mkmapview
+
+// Die MKMApViewExtension habe ich auch nach langem Suchen gefunden. Diese scheint aber nicht ganz korrekt zu funktionieren. Beschreibung dazu in der Funktion setCameraForUserTracking() weiter unten.
+// Ich möchte mit dieser UI zB auch später eine Navigation zu den angelegten Markern haben. Wenn es dann funktioniert, und ich denke es wird über das Setzen einer Kamera gesteuert, kann man das ja dann auf den Navigationsteil übertragen.
+// Wenn du so willst, soll es nachher ungefähr so aussehen wie Apple Karten im CarPlay oder auf dem iPhone im Querformat. Da ist die Position auch nach rechts oder links verschoben und die Details werden an der Seite eingeblendet.
+
 struct ContentView: View {
     @ObservedObject private var locationManager = LocationManager()
     @State private var mapView: MKMapView = MKMapView()
